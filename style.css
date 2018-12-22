@@ -25,7 +25,7 @@ ul {
 
 header {
     background-color: white;
-    height: 100px;
+    height: 95px;
 }
 
 /*=== Header Logo ===*/
@@ -109,6 +109,42 @@ color:#fff;
     transform: rotate(0deg) !important;
     margin-left: 5px;
 }
+
+.header-nav-top__tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    margin-left: -60px;
+    top:30px;
+    transition: all .2s;
+  }
+  
+  .tooltiptext::before {
+      content: ' ';   
+      border: solid #555;
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      padding: 25x;
+      z-index: -1;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      position: absolute;
+      top: -3px;
+      right: 15px;
+  }
 
 
 
