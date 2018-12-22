@@ -15,6 +15,7 @@ body {
     line-height: 1.7;
     padding: 0 10%;
     background-color: #efeff4;
+    letter-spacing: 0.8px;
     
 
 }
@@ -29,6 +30,10 @@ header {
 }
 
 /*=== Header Logo ===*/
+.header-nav {
+    height: 100%;
+}
+
 .header-nav__logo-container {
     float:left;
     width: 16%;
@@ -102,7 +107,7 @@ color:#fff;
 .header-nav-top i {
     transform: rotate(100deg);
     margin-right: 10px;
-    font-size: 14   px;
+    font-size: 14px;
 }
 
 .no-rotate-info {
@@ -129,7 +134,7 @@ color:#fff;
     right: 0;
     margin-left: -60px;
     top:30px;
-    transition: all .2s;
+    transition: all 0.1s;
   }
   
   .tooltiptext::before {
@@ -165,5 +170,62 @@ color:#fff;
 a.header-nav-bottom__item {
     text-decoration: none;
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
 }
+
+
+/* Secondary Nav */
+.secondary-nav {
+
+    background-color: #003e78;
+    height: 70px;
+    position: sticky;
+}
+
+.secondary-nav__title {
+    color:#fff;
+    margin-left:15px;
+    position: relative;
+    display: inline-block;
+    width: 16%;
+    float: left;
+    padding:20px 20px;
+}
+
+.secondary-nav__title-arrow {
+    display: inline;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.secondary-nav__items {
+    float: right;
+    display: inline-flex;
+    margin-right: 15px;
+
+
+}
+
+.secondary-nav__item {
+   padding:20px;
+}
+.secondary-nav__item a,
+.secondary-nav__item a:visited
+{
+   color:white;
+   text-decoration: none;
+ }
+ .secondary-nav__item:hover {
+    border-bottom-style: solid;
+    border-color: #fff;
+    background: #004382;
+    border-bottom-width: 4px; 
+
+ }
