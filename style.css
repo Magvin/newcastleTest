@@ -15,7 +15,6 @@ body {
     line-height: 1.7;
     padding: 0 10%;
     background-color: #efeff4;
-    letter-spacing: 0.8px;
     
 
 }
@@ -36,7 +35,7 @@ header {
 
 .header-nav__logo-container {
     float:left;
-    width: 16%;
+    width: 24%;
     height: 100%;
     border-right: 1px solid #efefef;
     text-align: center;
@@ -57,7 +56,7 @@ header {
 /*=== Header Navigation ===*/
 .header-nav__container {
     float: left;
-    width: 84%;
+    width: 76%;
     position: relative;
 }
 
@@ -90,7 +89,7 @@ header {
 }
 
 .header-nav-top__items>li {
-    padding-right: 30px;
+    padding-right: 35px;
     margin-top: 5px;
 }
 
@@ -121,6 +120,48 @@ color:#fff;
     border-bottom: 1px dotted black;
 
 }
+
+.header-nav-top__hamburger {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    margin: 20px;
+    display: none;
+}
+
+
+
+.header-nav-top__hamburger span:nth-child(1){
+    width: 40px;
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+.header-nav-top__hamburger span:nth-child(2){
+    width: 40px;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 10px;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%);
+}
+.header-nav-top__hamburger span:nth-child(3){
+    width: 40px;
+    content: '';
+    position: absolute;
+    top: 20px;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+
 .tooltiptext {
     visibility: hidden;
     width: 320px;
@@ -171,6 +212,15 @@ a.header-nav-bottom__item {
     text-decoration: none;
     color: #000;
     font-weight: 500;
+    transition: .2s;
+    padding: 20px;
+}
+
+.header-nav-bottom__item:hover {
+    border-bottom-style: solid;
+    border-color: #004382;
+    background: #fff;
+    border-bottom-width: 4px;
 }
 
 
@@ -179,7 +229,8 @@ a.header-nav-bottom__item {
 
     background-color: #003e78;
     height: 70px;
-    position: sticky;
+    line-height: 25px;
+    
 }
 
 .secondary-nav__title {
@@ -205,6 +256,18 @@ a.header-nav-bottom__item {
     cursor: pointer;
 }
 
+.secondary_nav__title-arrow-dropdown {
+    text-align: center;
+    transform: translate(-35px,20px);
+    background-color: #003e78;
+    height: 100%;
+    width: 180px;
+    display: none;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
 .secondary-nav__items {
     float: right;
     display: inline-flex;
@@ -215,6 +278,7 @@ a.header-nav-bottom__item {
 
 .secondary-nav__item {
    padding:20px;
+   transition: .2s;
 }
 .secondary-nav__item a,
 .secondary-nav__item a:visited
@@ -226,6 +290,247 @@ a.header-nav-bottom__item {
     border-bottom-style: solid;
     border-color: #fff;
     background: #004382;
-    border-bottom-width: 4px; 
+    border-bottom-width: 4px;
+    transform: translateY(-3px);
+
+ }
+ .secondary-nav__item:active {
+   
+    transform: translateY(-1px);
+
+ }
+
+
+ /* Billboard Section */
+    .billboard-container {
+        width: 100%;
+        max-height: 550px;
+    }
+
+    .bilboard__main {
+        height: 100%;
+    }
+    .bilboard__main-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bilboard__main-img {
+        position: relative;
+        background-color: #fff;
+      
+    }
+
+    .bilboard__main-img-overlay {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 25%;
+        text-align: left;
+        height: 65%;
+        background-color: #ffffffc9;
+    }
+
+    
+
+    .bilboard__main-img-text h2 {
+        font-size: 2.2em;
+        padding: 15px 20px 0 20px;
+    }
+    .bilboard__main-img-text p {
+        font-size: 0.8em;
+        padding: 0 20px;
+    }
+
+    .bilboard__main-img-text a {
+        display: block;
+        text-align: center;
+        background-color: rgb(1, 126, 219);
+        padding: 8px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        width: 80%;
+        margin: 5px auto;
+    }
+
+
+/* Vehicle Main Info */
+    .vehicle-info {
+        
+        width: 100%;
+        height: 50vh;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .vehicle-info__nav {
+        display: flex;
+        justify-content: center;    
+    }
+
+    .vehicle-info__nav-items {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+
+    .vehicle-info__nav-item {
+        border: 1px solid #004382;
+        border-radius: 2px;
+        color:#004382;
+        font-weight: 400;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        
+    }
+    
+    .tagged {
+        background-color:#004382;
+        color:#fff;
+    }
+    
+/*Media Queries */
+
+ @media only screen and (max-width: 880px) {
+    
+    .header-nav__logo-container {
+        width: 34%;
+    }
+    .header-nav-top {
+        display: none;
+    }
+    
+    .header-nav-bottom {
+        position: absolute;
+        right: 0;
+        top: 18vh;
+        background: aliceblue;
+        width: 80vw;
+        z-index: 1;
+        display: none;
+    }
+
+    .header-nav-bottom__items {
+        display: block;
+        text-align: left;
+    }
+
+    .header-nav__container {
+        width: 66%;
+    }
+    .header-nav-top__hamburger {
+        display: block;
+    }
+    
+    .secondary-nav__title {
+        width: 100%;
+    }
+
+    .secondary-nav__title-arrow{
+        left:85%
+    }
+
+    .secondary_nav__title-arrow-dropdown {
+        width: 100%;
+        transform: translate(-15px,20px);
+    }
+    
+    .secondary-nav__items {
+        display: none;
+    }
+    
+    .bilboard__main-img-overlay {
+        display: none;
+    }
+   
+
+ }
+
+ @media only screen and (min-width: 880px ) and (max-width: 1270px){
+
+    .header-nav-top__items>li {
+        padding-right: 30px;
+    }
+
+
+    .header-nav-bottom__item {
+       padding: 0 !important;
+       font-size: 0.95em;
+    }
+    .header-nav-bottom__items>li {
+        line-height: 45px;
+    }
+    .secondary-nav__title {
+
+        padding: 0;
+
+    }
+
+    .secondary-nav__item {
+        padding: 0 20px;
+    }
+    
+    .bilboard__main-img-text h2 {
+        font-size: 1.2em;
+    }
+
+    .bilboard__main-img-text p {
+        display: none;
+    }
+    
+    .bilboard__main-img-text {
+        font-size: 0.95em;
+        padding:5px 9px
+    }
+
+    .bilboard__main-img-overlay {
+        height: 35%;
+    }
+
+    .bilboard__main-img-text a {
+        padding: 5px;
+    }
+    
+    .secondary_nav__title-arrow-dropdown {
+        width: 100%;
+        transform: translate(-15px,20px);
+    }
+
+ }
+
+ @media only screen and (min-width: 1270px ) {
+
+    .bilboard__main-img-text h2 {
+        font-size: 1.5em;
+        padding: 15px 20px 0 20px;
+    }
+   
+
+ }
+
+
+ @media only screen and (min-width: 1920px ) {
+
+
+    .bilboard__main-img-overlay {
+        height: 60%;
+    }
+    .bilboard__main-img-text h2 {
+        font-size: 2.2em;
+    padding: 10px 25px;
+    }
+
+    .bilboard__main-img-text p {
+        font-size: 1em;
+        padding: 0 25px;
+       
+    }
+    .bilboard__main-img-text a {
+        margin:10px auto;
+        padding: 15px;
+    }
 
  }
