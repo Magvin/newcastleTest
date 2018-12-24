@@ -394,18 +394,7 @@ a.header-nav-bottom__item {
     
 /*Media Queries */
 
-@media only screen and (max-width: 425px){
 
-    body {
-          
-        padding: 0;
-    }
-
-    .header {
-        height: 10vh;
-    }
-
-}
 
  @media only screen and (max-width: 880px) {
     
@@ -414,6 +403,8 @@ a.header-nav-bottom__item {
         height: 15vh;
 
     }
+
+    
 
     .header-nav__logo-container {
         width: 34%;
@@ -553,3 +544,33 @@ a.header-nav-bottom__item {
     }
 
  }
+
+ @media only screen and (max-width: 425px){
+
+    body {
+          
+        padding: 0;
+    }
+
+    .header {
+        height: 10vh;
+    }
+
+    .header-nav-bottom {
+        top:10vh;   
+        width: 100vw;
+    }
+
+    .header-nav__logo-container {
+        width: 50%;
+    }
+
+    .header-nav__container {
+        width: 50%;
+    }
+
+    .vehicle-info__nav-item {
+        padding: 0 15px;
+    }
+
+}
