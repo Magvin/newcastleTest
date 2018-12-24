@@ -29,6 +29,8 @@ const hamburger = document.querySelector('.header-nav-top__hamburger')
 const secondaryNavArrow = document.querySelector('.secondary-nav__title-arrow');
 const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-arrow-dropdown');
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
+const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
+const vehicleLayouts = document.querySelector('.vehicle-info_nav-img-info-layouts')
 
 
 // Body //
@@ -146,14 +148,23 @@ secondaryNavArrow.addEventListener('click', () => {
 
 
 // Vehicle Info //
-vehicleItems.forEach(item => {
-    item.addEventListener('click', () => {
-        if (item.classList.value === 'vehicle-info__nav-item tagged') {
-            item.style.display = 'block'
-        } else {
-            item.style.display = 'none'
-        }
 
+vehicleItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (event.target.classList.value === 'vehicle-info__nav-item layouts') {
+            vehicleItems[0].classList.remove('tagged')
+            vehicleDimensions.style.display = 'none'
+            event.target.classList.value += ' tagged'
+            vehicleLayouts.style.display = 'block'
+        }
+        if (event.target.classList.value === 'vehicle-info__nav-item dimensions') {
+            vehicleItems[1].classList.remove('tagged')
+            // vehicleDimensions.style.display = 'none'
+            event.target.classList.value += ' tagged'
+            vehicleDimensions.style.display = 'inline-block '
+            vehicleLayouts.style.display = 'none'
+        }
+        console.log(event.target.classList.value)
     })
 })
 // console.log(vehicleItems[0].classList.value === 'vehicle-info__nav-item tagged')
