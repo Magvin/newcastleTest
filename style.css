@@ -372,7 +372,7 @@ a.header-nav-bottom__item {
     .vehicle-info__nav-items {
         border-collapse: separate;
         border-spacing: 0;
-        width: 100%;
+        width: 80%;
         margin-top: 20px;
         
     }
