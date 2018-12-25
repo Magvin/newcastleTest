@@ -660,12 +660,11 @@ a.header-nav-bottom__item {
         width: 50%;
     }
 
-    .vehicle-info__nav-items{
-        width: 70%;
-    }
+   
 
     .vehicle-info__nav-item {
-        padding: 0 15px;
+        padding: 5px;
+        line-height: 1;
     }
 
     .vehicle-info__btn {
