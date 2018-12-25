@@ -31,6 +31,7 @@ const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
 const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
 const vehicleLayouts = document.querySelector('.vehicle-info_nav-img-info-layouts')
+const vehicleNavColour = document.querySelector('.vehicle-info_nav-img-info-car-colour')
 const vehicleColourImg = document.querySelector('.vehicle-info_nav-img-info-car-colour-img')
 const vehicleColour = document.querySelector('.colour_picker')
 const vehicleColourCar = vehicleColour.children[0].children;
@@ -156,15 +157,28 @@ vehicleItems.forEach(item => {
     item.addEventListener('click', (event) => {
         if (event.target.classList.value === 'vehicle-info__nav-item layouts') {
             vehicleItems[0].classList.remove('tagged')
+            vehicleItems[2].classList.remove('tagged')
             vehicleDimensions.style.display = 'none'
+            vehicleNavColour.style.display = 'none'
             event.target.classList.value += ' tagged'
             vehicleLayouts.style.display = 'block'
+
         }
         if (event.target.classList.value === 'vehicle-info__nav-item dimensions') {
             vehicleItems[1].classList.remove('tagged')
+            vehicleItems[2].classList.remove('tagged')
             // vehicleDimensions.style.display = 'none'
             event.target.classList.value += ' tagged'
             vehicleDimensions.style.display = 'inline-block '
+            vehicleLayouts.style.display = 'none'
+            vehicleNavColour.style.display = 'none'
+        }
+        if (event.target.classList.value === 'vehicle-info__nav-item colour') {
+            vehicleItems[0].classList.remove('tagged')
+            vehicleItems[1].classList.remove('tagged')
+            vehicleDimensions.style.display = 'none'
+            event.target.classList.value += ' tagged'
+            vehicleNavColour.style.display = 'inline-block '
             vehicleLayouts.style.display = 'none'
         }
 

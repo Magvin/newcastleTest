@@ -415,7 +415,7 @@ a.header-nav-bottom__item {
 
     .vehicle-info_nav-img-info-dimensions {
         display: block;
-        animation: showLeft 1s ease-in;
+        animation: showOpacity 1s ease-in;
         transition: all .4s;
     }
 
@@ -470,7 +470,7 @@ a.header-nav-bottom__item {
     .vehicle-info_nav-img-info-layouts{
         margin-top: 15px;
         display: none;
-        animation: showLeft 1s ease-in;
+        animation: showOpacity 1s ease-in;
         transition: all .4s;
     }
     .vehicle-info_nav-img-info-layouts img{
@@ -483,6 +483,12 @@ a.header-nav-bottom__item {
         letter-spacing: 0.5px;
     }
 
+    .vehicle-info_nav-img-info-car-colour {
+        display: none;
+        animation: showOpacity 1s ease-in;
+        transition: all .4s;
+    }
+
     .vehicle-info_nav-img-info-car-colour img {
         width: 100%;
     }
@@ -493,7 +499,7 @@ a.header-nav-bottom__item {
     }
   
  
-    input[type="radio" i] {
+    input[type="radio" ] {
         width: 3vw;
         position: absolute;
         height: 3vw;
@@ -822,6 +828,14 @@ a.header-nav-bottom__item {
     .vehicle-info_nav-img-info-layouts span {
         font-weight: 400;
        font-size:0.75em;
+    }
+    input[type=radio] + label:before,
+    input[type=checkbox] + label:before {
+        width: 5vw;
+        height: 5vw;
+
+
+    
     }
 }
 
