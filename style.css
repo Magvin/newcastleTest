@@ -663,6 +663,16 @@ a.header-nav-bottom__item {
     .secondary-nav__title {
         margin-left:0;
     }
+    .secondary_nav__title-arrow-dropdown {
+        
+        transform: translate(0px,20px);
+    }
+
+    .vehicle-info__nav-items {
+       
+        width: 100%;
+       
+    }
 
     .vehicle-info__nav-item {
         padding: 5px;
