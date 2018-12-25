@@ -31,6 +31,9 @@ const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
 const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
 const vehicleLayouts = document.querySelector('.vehicle-info_nav-img-info-layouts')
+const vehicleColourImg = document.querySelector('.vehicle-info_nav-img-info-car-colour-img')
+const vehicleColour = document.querySelector('.colour_picker')
+const vehicleColourCar = vehicleColour.children[0].children;
 
 
 // Body //
@@ -164,10 +167,23 @@ vehicleItems.forEach(item => {
             vehicleDimensions.style.display = 'inline-block '
             vehicleLayouts.style.display = 'none'
         }
-        console.log(event.target.classList.value)
+
     })
 })
-// console.log(vehicleItems[0].classList.value === 'vehicle-info__nav-item tagged')
+
+
+// Vehicle Colour //
+
+
+vehicleColour.addEventListener('click', (e) => {
+    let colour = event.target.value
+    if (event.target.type) {
+        vehicleColourImg.src = `https://www.bristolstreetversa.com/images/colour_swatches/Grand-Tourneo-Connect/${colour}.png`
+    }
+
+
+
+})
 
 
 
