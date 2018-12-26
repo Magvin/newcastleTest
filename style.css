@@ -606,6 +606,12 @@ a.header-nav-bottom__item {
         
         font-size:2em;
       }
+
+      .vehicle-info_nav-img-info-trim {
+          display: none;
+          animation: showOpacity 1s ease-in;
+          transition: all .4s;
+      }
    
       .vehicle-interior {
         background: url(https://www.bristolstreetversa.com/custom/50563.jpg);

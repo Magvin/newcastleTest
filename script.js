@@ -35,6 +35,7 @@ const vehicleNavColour = document.querySelector('.vehicle-info_nav-img-info-car-
 const vehicleColourImg = document.querySelector('.vehicle-info_nav-img-info-car-colour-img')
 const vehicleColour = document.querySelector('.colour_picker')
 const vehicleColourCar = vehicleColour.children[0].children;
+const vehicleTrim = document.querySelector('.vehicle-info_nav-img-info-trim');
 
 
 // Body //
@@ -158,8 +159,10 @@ vehicleItems.forEach(item => {
         if (event.target.classList.value === 'vehicle-info__nav-item layouts') {
             vehicleItems[0].classList.remove('tagged')
             vehicleItems[2].classList.remove('tagged')
+            vehicleItems[3].classList.remove('tagged')
             vehicleDimensions.style.display = 'none'
             vehicleNavColour.style.display = 'none'
+            vehicleTrim.style.display = 'none'
             event.target.classList.value += ' tagged'
             vehicleLayouts.style.display = 'block'
 
@@ -167,19 +170,33 @@ vehicleItems.forEach(item => {
         if (event.target.classList.value === 'vehicle-info__nav-item dimensions') {
             vehicleItems[1].classList.remove('tagged')
             vehicleItems[2].classList.remove('tagged')
+            vehicleItems[3].classList.remove('tagged')
             // vehicleDimensions.style.display = 'none'
             event.target.classList.value += ' tagged'
             vehicleDimensions.style.display = 'inline-block '
             vehicleLayouts.style.display = 'none'
             vehicleNavColour.style.display = 'none'
+            vehicleTrim.style.display = 'none'
         }
         if (event.target.classList.value === 'vehicle-info__nav-item colour') {
             vehicleItems[0].classList.remove('tagged')
             vehicleItems[1].classList.remove('tagged')
+            vehicleItems[3].classList.remove('tagged')
             vehicleDimensions.style.display = 'none'
             event.target.classList.value += ' tagged'
             vehicleNavColour.style.display = 'inline-block '
             vehicleLayouts.style.display = 'none'
+            vehicleTrim.style.display = 'none'
+        }
+        if (event.target.classList.value === 'vehicle-info__nav-item trim') {
+            vehicleItems[0].classList.remove('tagged')
+            vehicleItems[1].classList.remove('tagged')
+            vehicleItems[2].classList.remove('tagged')
+            vehicleDimensions.style.display = 'none'
+            event.target.classList.value += ' tagged'
+            vehicleNavColour.style.display = 'none '
+            vehicleLayouts.style.display = 'none'
+            vehicleTrim.style.display = 'block'
         }
 
     })
