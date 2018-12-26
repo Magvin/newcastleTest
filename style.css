@@ -607,7 +607,93 @@ a.header-nav-bottom__item {
         font-size:2em;
       }
    
+      .vehicle-interior {
+        background: url(https://www.bristolstreetversa.com/custom/50563.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+        background-position: right;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        margin-top: 15px;
+        background-position-y: 20%;
+
+      }
+
+      .vehicle-interior__trims {        
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+      }
+
+      .vehicle-interior__trims form {
+        width: 100%;
+        display: contents;
+      }
+
+      .vehicle-interior__trim {
+        width: 33%;
+        display: flex;
+          flex-direction: column;
+      }
+      
+
+      .trim-img{
+        display: inline-block;
+          margin-bottom: 15px;
+      }
+      .trim-img img{
+        width: 100%;
+      }
+
+
+      .vehicle-interior__trim span{
+        display: inline-block;
+        font-weight: 500;
+        width: 50%;
+        
+      }
+
+      .vehicle-interior__trim-info {
+        display: flex;
+      }
+
+      .vehicle-interior__trim-text {
+        display: inline-block;
+      }
+      .vehicle-interior__trim-text input[type='radio'] {
+        float: right;
+        width: 2vw;
+        height: 4vh;
+        position: absolute;
+      }
+
+      #trim-titanium::before {
+        background-color: #ffffff;
+        border: 1px solid black;
+        margin-right: 10px;
+        width: 2vw;
+        height: 4vh;
+        opacity: 1;
+        float: right;
+        border-radius: 0;
+      }
+
+      #style-trim-titanium:checked + label:before {
+        content: '\2713';
+        background-color: transparent;
+        color: #fff;
+        box-shadow: none;
+        background: #a7a7a7;
+        font-size: 1.2em;
+        font-weight: 600;
+        border-color: white;
+      }
      
+      .vehicle-interior__trim p {
+        display: inline-block;
+      }
     
 /*Media Queries */
 
@@ -679,6 +765,16 @@ a.header-nav-bottom__item {
         font-size:0.8em;
       }
 
+      #trim-titanium::before {
+        width: 6vw;
+        height: 3vh;
+    }
+
+    #style-trim-titanium {
+        width: 6vw;
+        height: 3vh;
+    }
+
  }
 
  @media only screen and (min-width: 880px ) and (max-width: 1270px){
@@ -736,6 +832,21 @@ a.header-nav-bottom__item {
         
         font-size:1.2em;
       }
+
+      #trim-titanium::before {
+        width: 3vw;
+        height: 3vh;
+       
+    }
+
+    #style-trim-titanium {
+        width: 3vw;
+        height: 3vh;
+        
+    }
+    #style-trim-titanium:checked + label:before {
+        font-size: 1.2em;
+    }
  }
 
  @media only screen and (min-width: 1270px ) {
@@ -829,13 +940,40 @@ a.header-nav-bottom__item {
         font-weight: 400;
        font-size:0.75em;
     }
+
+
     input[type=radio] + label:before,
     input[type=checkbox] + label:before {
         width: 5vw;
         height: 5vw;
+    }
 
+    .colour_picker {
+        width: 71vw;
+    }
 
-    
+    .vehicle-interior {
+       background-size: contain;
+       height: 25vh;
+    }
+
+    .vehicle-interior__trims {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    .vehicle-interior__trim {
+        width: 100%;
+    }
+
+    #trim-titanium::before {
+        width: 6vw;
+        height: 3vh;
+    }
+
+    #style-trim-titanium {
+        width: 6vw;
+        height: 3vh;
     }
 }
 
