@@ -1,13 +1,3 @@
-// contrast #0D5932,#4F4F4F
-
-// #efefef
-
-
-//windows onload///
-
-
-
-
 
 // Header //
 const header = document.querySelector('.header-nav');
@@ -36,12 +26,28 @@ const vehicleColourImg = document.querySelector('.vehicle-info_nav-img-info-car-
 const vehicleColour = document.querySelector('.colour_picker')
 const vehicleColourCar = vehicleColour.children[0].children;
 const vehicleTrim = document.querySelector('.vehicle-info_nav-img-info-trim');
+const slider = document.getElementsByClassName('vehicle-image-gallery__img')
+const sliderNumbers = document.querySelector('.vehicle-image-gallery__img-numbers')
+const vehicleSliderText = document.querySelector('.vehicle-image-gallery__text')
+const readMore = document.querySelector('#read-more')
 
+
+
+
+
+let img = ['https://www.bristolstreetversa.com/custom/50563.jpg', 'https://www.bristolstreetversa.com/custom/50564.jpg', 'https://www.bristolstreetversa.com/custom/50565.jpg'];
+let i = 0;
 
 // Body //
 
 const body = document.body;
 
+function showText() {
+
+    vehicleSliderText.children[1].style.display = 'block'
+
+    console.log(vehicleSliderText.removeChild(readMore))
+}
 
 
 
@@ -66,7 +72,7 @@ contrastChange.addEventListener('click', () => {
 
 })
 contrastBack.addEventListener('click', () => {
-    logo.src = '/img/logo.svg';
+    logo.src = 'img/logo.svg';
     header.style.color = '#000';
     header.style.backgroundColor = '#fff';
     headerCall.style.backgroundColor = '#14a65b'
@@ -218,3 +224,44 @@ vehicleColour.addEventListener('click', (e) => {
 
 
 
+// Image Gallery Slider //
+function nextColor() {
+
+    sliderNumbers.innerText = `${1 + i}/${img.length}`
+
+
+    if (i < img.length - 1) {
+
+        i++
+
+    } else {
+
+        i = 0;
+    }
+    showColow()
+
+
+
+}
+function showColow() {
+    slider[0].style.background = `url(${img[i]}) no-repeat`;
+    slider[0].style.backgroundPosition = 'top';
+    slider[0].style.backgroundSize = '85vw'
+
+
+}
+function prevColor() {
+
+    i--
+
+    if (i < 0) {
+
+        i = img.length - 1;
+    }
+
+    showColow()
+}
+
+sliderNumbers.innerText = `${3}/${img.length}`
+
+showText

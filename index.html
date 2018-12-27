@@ -142,7 +142,7 @@
                 <th class="vehicle-info__nav-item trim">Interior Trim</th>
             </table>
         </div>
-        <div class="vehicle-info_nav-img-info">
+        <div class="vehicle-info__nav-img-info">
             <div class="vehicle-info_nav-img-info-dimensions">
                 <div class="vehicle-info_nav-img-info-dimensions-table">
 
@@ -280,7 +280,7 @@
                                     <p>Bolster: Malt in Charcoal Black</p>
                                 </div>
                                 <div class="vehicle-interior__trim-radio">
-                                    <input type="radio" name="trim" id="style-trim-titanium">
+                                    <input type="radio" name="trim" id="style-trim-titanium" checked>
                                     <label id="trim-titanium"></label>
                                 </div>
                             </div>
@@ -291,7 +291,39 @@
             </div>
             <a href="/" class='vehicle-info__btn btn'>View our Versa Connect offers</a>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <div class="vehicle-image-gallery">
+        <div class="vehicle-image-gallery__img">
+
+            <div class='leftArrow' onclick='prevColor()'> <i class="arrow left-arrow"></i></div>
+            <div class='rightArrow' onclick='nextColor()'> <i class="arrow right-arrow"></i></div>
+
+            <div class="vehicle-image-gallery__img-numbers"></div>
+        </div>
+        <div class="vehicle-image-gallery__text">
+
+            <p>The Versa Connect takes these attributes and focused on extending them seamlessly into the wheelchair accessible
+                ascpects of out vehicle. It is our aim to product a coversion that is both practical and stylish, with an
+                attention to detail that provides the same high quality look and feel throughout the vehicle.
+            </p>
+            <span class='vehicle-image-gallery__text-hide'>
+                <p style=" margin: 2vw auto 0 auto">The Versa Connect is available in two wheelbases. The Short Versa Connect
+                    can accommodate the wheelchair user and up to 3 seated passengers (including the driver) or up to 5 seated
+                    passengers without the wheelchair. The Long Versa Connect can accommodate the wheelchair user and up
+                    to 5 seated passengers (including the driver) or up to 7 seated passengers without the wheelchair.
+                </p>
+                <p style=" margin: 2vw auto"> Twin sliding doors alliw for ease of passengers access with a lightweight manual
+                    ramp to the rear for wheelchair access. As an optional extra, the ramp can have the added ability, using
+                    a simple lever, to fold at into the vehicle so that when the wheelchair user is not travelling, a huge
+                    and easily accessible boot space is created making the Versa Connect ever more practical
+                </p>
+            </span>
+            <span id='read-more' onclick='showText()'>Read More</span>
+        </div>
+        <a href="/" class='vehicle-info__btn btn btn_gallery'>View our Versa Connect offers</a>
+    </div>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
