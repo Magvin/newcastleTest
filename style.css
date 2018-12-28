@@ -219,7 +219,7 @@ a.header-nav-bottom__item {
 .header-nav-bottom__item:hover {
     border-bottom-style: solid;
     border-color: #004382;
-    background: #fff;
+    
     border-bottom-width: 4px;
 }
 
@@ -264,7 +264,7 @@ a.header-nav-bottom__item {
     width: 180px;
     display: none;
     list-style: none;
-    position: relative;
+    position: absolute;
     z-index: 1;
 }
 
@@ -279,6 +279,7 @@ a.header-nav-bottom__item {
 .secondary-nav__item {
    padding:20px;
    transition: .2s;
+   background-color: #003e78;
 }
 .secondary-nav__item a,
 .secondary-nav__item a:visited
@@ -463,8 +464,9 @@ a.header-nav-bottom__item {
     }
     
     .vehicle-info__btn {
-        width: 40%;
+        width: 30%;
         margin-top: 15px;
+        
     }
 
     .vehicle-info_nav-img-info-layouts{
@@ -704,7 +706,7 @@ a.header-nav-bottom__item {
 
 /* Image Gallery */
       .vehicle-image-gallery {
-        height: 550px;
+        height: 30vw;
       }
       .vehicle-image-gallery__img {
       background: url('https://www.bristolstreetversa.com/custom/50563.jpg') no-repeat;
@@ -735,7 +737,7 @@ a.header-nav-bottom__item {
      opacity: 0.7;
     }
 
-    i {
+    .arrow {
         border: solid white;
         border-width: 0 1vw 1vw 0;
         display: inline-block;
@@ -755,13 +757,18 @@ a.header-nav-bottom__item {
 
     .vehicle-image-gallery p {
         width: 55vw;
-        margin: 5vw auto 0 auto;
+        margin: 0 auto 0 auto;
     }
     
     .btn_gallery {
         width: 30%;
     }
 
+    .vehicle-image-gallery__text {
+        background: #fff;
+        padding: 5vw 0 3vw 0;
+
+    }
     #read-more {
         cursor: pointer;
     text-align: center;
@@ -822,7 +829,7 @@ a.header-nav-bottom__item {
 
     .secondary_nav__title-arrow-dropdown {
         width: 100%;
-        transform: translate(-15px,20px);
+        transform: translate(-35px,20px);
     }
     
     .secondary-nav__items {
@@ -922,12 +929,14 @@ a.header-nav-bottom__item {
         height: 3vh;
         
     }
+
     #style-trim-titanium:checked + label:before {
         font-size: 1.2em;
     }
-    /* .vehicle-image-gallery__img-numbers {
-        top:40vw;
-    } */
+
+    #read-more {
+        display: none;
+    }
  }
 
  @media only screen and (min-width: 1270px ) {
@@ -943,6 +952,10 @@ a.header-nav-bottom__item {
         font-size:1.8em;
       }
 
+      #read-more {
+        display: none;
+    }
+
  }
 
 
@@ -952,6 +965,7 @@ a.header-nav-bottom__item {
     .bilboard__main-img-overlay {
         height: 60%;
     }
+
     .bilboard__main-img-text h2 {
         font-size: 2.2em;
     padding: 10px 25px;
@@ -962,9 +976,14 @@ a.header-nav-bottom__item {
         padding: 0 25px;
        
     }
+
     .bilboard__main-img-text a {
         margin:10px auto;
         padding: 15px;
+    }
+
+    #read-more {
+        display: none;
     }
 
  }
@@ -998,7 +1017,7 @@ a.header-nav-bottom__item {
     }
     .secondary_nav__title-arrow-dropdown {
         
-        transform: translate(0px,20px);
+        transform: translate(-20px,20px);
     }
 
     .vehicle-info__nav-items {

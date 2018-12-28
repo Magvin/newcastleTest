@@ -18,8 +18,11 @@ const tooltip = document.querySelector('.tooltiptext');
 const hamburger = document.querySelector('.header-nav-top__hamburger')
 const secondaryNavArrow = document.querySelector('.secondary-nav__title-arrow');
 const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-arrow-dropdown');
+const bilboardOverlay = document.querySelector('.bilboard__main-img-overlay')
+const vehicleInfo = document.querySelector('.vehicle-info');
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
 const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
+const vehicleDimensionsTabel = document.querySelectorAll('.vehicle-info__nav-info-dimensions-table-item-name')
 const vehicleLayouts = document.querySelector('.vehicle-info_nav-img-info-layouts')
 const vehicleNavColour = document.querySelector('.vehicle-info_nav-img-info-car-colour')
 const vehicleColourImg = document.querySelector('.vehicle-info_nav-img-info-car-colour-img')
@@ -61,15 +64,22 @@ contrastChange.addEventListener('click', () => {
     headerLogo.style.borderRight = '1px solid #fff';
     body.style.backgroundColor = '#333';
     logo.src = '/img/logo-contrast.svg'
+    vehicleInfo.style.backgroundColor = '#262626';
+    vehicleInfo.style.color = '#fff';
+    vehicleSliderText.style.backgroundColor = '#262626';
+    vehicleSliderText.style.color = '#fff';
+    bilboardOverlay.style.backgroundColor = '#262626';
+    bilboardOverlay.style.color = '#fff';
+
+
 
     for (let i = 0; i < headerTopItemsBox.length; i++) {
         headerTopItemsBox[i].style.backgroundColor = '#fff'
         headerTopItemsBox[i].style.color = 'rgb(255, 9, 9)'
     }
-    console.log(headerBottom)
     headerBottom.forEach(item => item.style.color = '#fff')
-
-
+    vehicleDimensionsTabel.forEach(item => item.style.color = '#000')
+    vehicleItems.forEach(item => item.style.color = '#fff')
 })
 contrastBack.addEventListener('click', () => {
     logo.src = 'img/logo.svg';
@@ -79,6 +89,12 @@ contrastBack.addEventListener('click', () => {
     headerTopItems.style.borderBottom = '1px solid #efefef';
     headerLogo.style.borderRight = '1px solid #efefef';
     body.style.backgroundColor = '#efefef';
+    vehicleInfo.style.backgroundColor = '#fff';
+    vehicleInfo.style.color = '#000';
+    vehicleSliderText.style.backgroundColor = '#fff';
+    vehicleSliderText.style.color = '#000';
+    bilboardOverlay.style.backgroundColor = '#fff';
+    bilboardOverlay.style.color = '#000';
     for (let i = 0; i < headerTopItemsBox.length; i++) {
         headerTopItemsBox[0].style.backgroundColor = '#000'
         headerTopItemsBox[0].style.color = 'rgb(255, 255, 9)'
@@ -87,6 +103,9 @@ contrastBack.addEventListener('click', () => {
 
     }
     headerBottom.forEach(item => item.style.color = '#000')
+    vehicleDimensionsTabel.forEach(item => item.style.color = '#000')
+    vehicleItems.forEach(item => item.style.color = '#000')
+
 })
 // Tooltip //
 
@@ -246,17 +265,23 @@ function nextColor() {
 function showColow() {
     slider[0].style.background = `url(${img[i]}) no-repeat`;
     slider[0].style.backgroundPosition = 'top';
-    slider[0].style.backgroundSize = '85vw'
+    slider[0].style.backgroundSize = '100vw'
 
 
 }
 function prevColor() {
+
+    sliderNumbers.innerText = `${i}/${img.length}`
+
+
+
 
     i--
 
     if (i < 0) {
 
         i = img.length - 1;
+
     }
 
     showColow()
@@ -264,4 +289,4 @@ function prevColor() {
 
 sliderNumbers.innerText = `${3}/${img.length}`
 
-showText
+
