@@ -706,12 +706,12 @@ a.header-nav-bottom__item {
 
 /* Image Gallery */
       .vehicle-image-gallery {
-        height: 30vw;
+        height: 100%;
       }
       .vehicle-image-gallery__img {
       background: url('https://www.bristolstreetversa.com/custom/50563.jpg') no-repeat;
       width: 100%;
-      height: 100%;
+      height: 30vw;
       background-position: top;
       background-size: cover;
       position: relative;
@@ -1076,9 +1076,7 @@ a.header-nav-bottom__item {
         height: 3vh;
     }
 
-    .vehicle-image-gallery {
-        height: 30vh;
-    }
+   
     
     .leftArrow {
         margin-left: 10vw;

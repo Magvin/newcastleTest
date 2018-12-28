@@ -18,7 +18,7 @@ const tooltip = document.querySelector('.tooltiptext');
 const hamburger = document.querySelector('.header-nav-top__hamburger')
 const secondaryNavArrow = document.querySelector('.secondary-nav__title-arrow');
 const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-arrow-dropdown');
-const bilboardOverlay = document.querySelector('.bilboard__main-img-overlay')
+const bilboardOverlay = document.querySelectorAll('.bilboard__main-img-overlay')
 const vehicleInfo = document.querySelector('.vehicle-info');
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
 const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
@@ -68,8 +68,7 @@ contrastChange.addEventListener('click', () => {
     vehicleInfo.style.color = '#fff';
     vehicleSliderText.style.backgroundColor = '#262626';
     vehicleSliderText.style.color = '#fff';
-    bilboardOverlay.style.backgroundColor = '#262626';
-    bilboardOverlay.style.color = '#fff';
+
 
 
 
@@ -80,6 +79,10 @@ contrastChange.addEventListener('click', () => {
     headerBottom.forEach(item => item.style.color = '#fff')
     vehicleDimensionsTabel.forEach(item => item.style.color = '#000')
     vehicleItems.forEach(item => item.style.color = '#fff')
+    bilboardOverlay.forEach(item => {
+        item.style.color = '#fff';
+        item.style.backgroundColor = '#262626'
+    })
 })
 contrastBack.addEventListener('click', () => {
     logo.src = 'img/logo.svg';
@@ -93,8 +96,7 @@ contrastBack.addEventListener('click', () => {
     vehicleInfo.style.color = '#000';
     vehicleSliderText.style.backgroundColor = '#fff';
     vehicleSliderText.style.color = '#000';
-    bilboardOverlay.style.backgroundColor = '#fff';
-    bilboardOverlay.style.color = '#000';
+
     for (let i = 0; i < headerTopItemsBox.length; i++) {
         headerTopItemsBox[0].style.backgroundColor = '#000'
         headerTopItemsBox[0].style.color = 'rgb(255, 255, 9)'
@@ -105,6 +107,10 @@ contrastBack.addEventListener('click', () => {
     headerBottom.forEach(item => item.style.color = '#000')
     vehicleDimensionsTabel.forEach(item => item.style.color = '#000')
     vehicleItems.forEach(item => item.style.color = '#000')
+    bilboardOverlay.forEach(item => {
+        item.style.color = '#000';
+        item.style.backgroundColor = '#fff'
+    })
 
 })
 // Tooltip //
