@@ -917,6 +917,9 @@ a.header-nav-bottom__item {
     /* .vehicle-image-gallery__img-numbers {
         top:40vw;
     } */
+    #read-more {
+        display: none;
+    }
 
  }
 
