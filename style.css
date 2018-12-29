@@ -1152,6 +1152,10 @@ a.header-nav-bottom__item {
     .vehicle-image-gallery__text-hide {
         display: none;
     }
+
+    .footer-main__left {
+        display: none;
+    }
     
 }
 
