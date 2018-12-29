@@ -1134,12 +1134,18 @@ a.header-nav-bottom__item {
     
     .leftArrow {
         margin-left: 10vw;
-        margin-top:20%
+        margin-top:20%;
+        z-index: 1;
     }
 
     .rightArrow {
         margin-right: 10vw;
-        margin-top:20%
+        margin-top:20%;
+        z-index: 1;
+    }
+    .arrow {
+        border-width: 0 1.5vw 1.5vw 0;
+        padding: 1.5vw;
     }
 
    
