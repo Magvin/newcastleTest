@@ -780,60 +780,104 @@ a.header-nav-bottom__item {
 /* Footer */
 
 
-.footer-container {
-    width: 100%;
-    padding: 0 20px;
-    background-color: #43484d;
-}
+    .footer-container {
+        width: 100%;
+        padding: 0 20px;
+        background-color: #43484d;
+    }
 
-.footer-main {
-    width: 80%;
-    height: 100%;
-    padding: 10vh 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
+    .footer-main {
+        width: 80%;
+        height: 100%;
+        padding: 10vh 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.footer-main__left {
-    margin-top: auto;
-}
+    .footer-main__left {
+        margin-top: auto;
+    }
 
-.footer-main__left p{
-    margin-bottom: auto;
-    color:#818588;
-}
+    .footer-main__left p{
+        margin-bottom: auto;
+        color:#818588;
+    }
 
-.footer-main__right {
-    width: 100%;
-    
-}
+    .footer-main__right {
+        width: 100%;
+        
+    }
 
-.footer-main__right-nav  a,
-.footer-main__right-nav  a:visited 
-{
-    color:#fff;
-    text-decoration: none;
-}
+    .footer-main__right-nav  a,
+    .footer-main__right-nav  a:visited 
+    {
+        color:#fff;
+        text-decoration: none;
+    }
 
-.footer-main__right-nav  {
-    display: flex;
-    justify-content: flex-end;
-}
+    .footer-main__right-nav  {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    margin: 0 2vw;
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2vw;
 
-}
+    }
 
-.footer-bottom {
-    font-size: 0.7em;
-    text-align: center;
-    color:#696969;
-    padding-bottom: 20px;
-}
+    .footer-bottom {
+        font-size: 0.7em;
+        text-align: center;
+        color:#696969;
+        padding-bottom: 20px;
+    }
+
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        width: 80%;
+        bottom: 3vh;
+        right: 100;
+        right: 10vw;
+    }
+
+    .modal_overlay {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        float: right;
+    }
+
+    .modal_overlay input {
+        padding: 5px;
+        border-radius: 5px;
+        background: #dcd8d8;
+        border-color: #dcd8d8;
+        border-width: 0px;
+    }
+    .modal_overlay form input::placeholder {
+        font-weight: 600;
+        color:#000; 
+        letter-spacing: 0.2px;
+    }
+
+    .modal_overlay button {
+
+        padding: 5px;
+        border-radius: 5px;
+        border-width: 0px;
+        background: #003e78;
+        color: #fff;
+
+    }
+    .modal_overlay span {
+        cursor: pointer;
+    }
 /*Media Queries */
 
 

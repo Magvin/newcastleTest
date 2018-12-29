@@ -34,7 +34,7 @@ const slider = document.getElementsByClassName('vehicle-image-gallery__img')
 const sliderNumbers = document.querySelector('.vehicle-image-gallery__img-numbers')
 const vehicleSliderText = document.querySelector('.vehicle-image-gallery__text')
 const readMore = document.querySelector('#read-more')
-
+const modal = document.querySelector('.modal')
 
 
 
@@ -302,6 +302,15 @@ function prevColor() {
     showColow()
 }
 
+
+function closeModal() {
+    modal.style.display = 'none'
+}
+
 sliderNumbers.innerText = `${3}/${img.length}`
 
+function openModalOnTime() {
+    setTimeout(function () { modal.style.display = 'block' }, 15000);
+}
 
+openModalOnTime();
