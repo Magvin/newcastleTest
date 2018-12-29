@@ -19,6 +19,7 @@ const hamburger = document.querySelector('.header-nav-top__hamburger')
 const secondaryNavArrow = document.querySelector('.secondary-nav__title-arrow');
 const secondaryNavArrowDropdown = document.querySelector('.secondary_nav__title-arrow-dropdown');
 const bilboardOverlay = document.querySelectorAll('.bilboard__main-img-overlay')
+const bilboardImg = document.querySelectorAll('.bilboard__main-img')
 const vehicleInfo = document.querySelector('.vehicle-info');
 const vehicleItems = document.querySelectorAll('.vehicle-info__nav-item')
 const vehicleDimensions = document.querySelector('.vehicle-info_nav-img-info-dimensions')
@@ -83,6 +84,10 @@ contrastChange.addEventListener('click', () => {
         item.style.color = '#fff';
         item.style.backgroundColor = '#262626'
     })
+    bilboardImg.forEach(item => {
+
+        item.style.backgroundColor = '#262626'
+    })
 })
 contrastBack.addEventListener('click', () => {
     logo.src = 'img/logo.svg';
@@ -109,6 +114,10 @@ contrastBack.addEventListener('click', () => {
     vehicleItems.forEach(item => item.style.color = '#000')
     bilboardOverlay.forEach(item => {
         item.style.color = '#000';
+        item.style.backgroundColor = '#fff'
+    })
+    bilboardImg.forEach(item => {
+
         item.style.backgroundColor = '#fff'
     })
 

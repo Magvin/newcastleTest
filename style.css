@@ -310,6 +310,7 @@ a.header-nav-bottom__item {
 
     .bilboard__main {
         height: 100%;
+        display: flex;
     }
     .bilboard__main-img img {
         width: 100%;
@@ -319,6 +320,7 @@ a.header-nav-bottom__item {
     .bilboard__main-img {
         position: relative;
         background-color: #fff;
+        max-height: 550px;
       
     }
 
@@ -328,7 +330,6 @@ a.header-nav-bottom__item {
         left: 10%;
         width: 25%;
         text-align: left;
-        height: 65%;
         background-color: #fff;
         opacity: 0.9;
     }
@@ -774,8 +775,65 @@ a.header-nav-bottom__item {
     text-align: center;
     display: block;
     }
-        
+
+
+/* Footer */
+
+
+.footer-container {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #43484d;
+}
+
+.footer-main {
+    width: 80%;
+    height: 100%;
+    padding: 10vh 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main__left {
+    margin-top: auto;
+}
+
+.footer-main__left p{
+    margin-bottom: auto;
+    color:#818588;
+}
+
+.footer-main__right {
+    width: 100%;
     
+}
+
+.footer-main__right-nav  a,
+.footer-main__right-nav  a:visited 
+{
+    color:#fff;
+    text-decoration: none;
+}
+
+.footer-main__right-nav  {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;
+
+}
+
+.footer-bottom {
+    font-size: 0.7em;
+    text-align: center;
+    color:#696969;
+    padding-bottom: 20px;
+}
 /*Media Queries */
 
 
@@ -834,11 +892,11 @@ a.header-nav-bottom__item {
     
     .secondary-nav__items {
         display: none;
-    }
-    
-    .bilboard__main-img-overlay {
+    } .bilboard__main-img-overlay {
         display: none;
     }
+    
+   
 
     input[type=radio]:checked + label:before {
        
@@ -899,9 +957,7 @@ a.header-nav-bottom__item {
         padding:5px 9px
     }
 
-    .bilboard__main-img-overlay {
-        height: 35%;
-    }
+  
 
     .bilboard__main-img-text a {
         padding: 5px;
@@ -962,9 +1018,7 @@ a.header-nav-bottom__item {
  @media only screen and (min-width: 1920px ) {
 
 
-    .bilboard__main-img-overlay {
-        height: 60%;
-    }
+   
 
     .bilboard__main-img-text h2 {
         font-size: 2.2em;
@@ -1049,7 +1103,7 @@ a.header-nav-bottom__item {
     }
 
     .colour_picker {
-        width: 71vw;
+        width: 80vw;
     }
 
     .vehicle-interior {
@@ -1068,7 +1122,7 @@ a.header-nav-bottom__item {
 
     #trim-titanium::before {
         width: 6vw;
-        height: 3vh;
+        height: 4vh;
     }
 
     #style-trim-titanium {
@@ -1080,18 +1134,15 @@ a.header-nav-bottom__item {
     
     .leftArrow {
         margin-left: 10vw;
-        margin-top:25%
+        margin-top:20%
     }
 
     .rightArrow {
         margin-right: 10vw;
-        margin-top:25%
+        margin-top:20%
     }
 
-    /* .vehicle-image-gallery__img-numbers {
-        top:30%
-    } */
-
+   
     
     .vehicle-image-gallery p {
         width: 85vw;
